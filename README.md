@@ -4,6 +4,7 @@ Just a demo using pymodbus for PLC's
 I did not create any of the imports used but This is simply demo code that works triggering PLC's VIA modbus
 
 Example
+
 C0 is the lowest adress available on the PLC
 
 remove the "C"
