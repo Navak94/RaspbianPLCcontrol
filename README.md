@@ -9,7 +9,7 @@ C0 is the lowest address available on the PLC
 
 remove the "C"
 
-address of 0 in this case is  3073 according to the datasheet
+address of 0 in this case is  3073 according to the datasheet for Automation Direct DL-06
 
 C1006 is what I want to trigger.
 
