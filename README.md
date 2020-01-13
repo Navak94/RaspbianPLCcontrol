@@ -3,12 +3,6 @@ Just a demo using pymodbus for PLC's
 
 I did not create any of the imports used but This is simply demo code that works triggering PLC's VIA modbus
 
-May have to adjust the width and height of buttons depending on what screen you're using.
-
-In order for this to work you need the addresses of where the "relays" are which is usually given in your PLC manual.  
-
-in my case with the Automation Direct DL-06  C relay spots are depicted in octals.
-
 Example
 C0 is the lowest adress available on the PLC
 
