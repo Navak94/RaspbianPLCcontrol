@@ -5,7 +5,7 @@ I did not create any of the imports used but This is simply demo code that works
 
 Example
 
-C0 is the lowest adress available on the PLC
+C0 is the lowest address available on the PLC
 
 remove the "C"
 
