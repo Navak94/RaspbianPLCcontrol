@@ -15,7 +15,7 @@ C1006 is what I want to trigger.
 
 Remove the "C"
 
-1006 in octals gives 518 (you can look this up on rapidtables if you're feeling ultra lazy)
+1006 in octals gives 518 in decimal (you can look this up on rapidtables if you're feeling ultra lazy)
 
 518 + 3073 = 3591
 
