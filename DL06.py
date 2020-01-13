@@ -3,20 +3,19 @@ import time
 from tkinter import *
 from subprocess import call
 import sys
-#import pyvisa 
-SERVER_HOST = "192.168.72.114"
+SERVER_HOST = "192.168.72.114" # whatever you set the IP of your PLC to.  You need to set that up with software that comes with PLC
 SERVER_PORT = 502
 
-#have to adjust to fit your screen
+#have to adjust to fit your screen likely this won't work for other sizes.   Using a 1280x720 screen
 h=5 # Height
 w=10 #width
-#p=100# Height
+
 
 c = ModbusClient()
 c.host(SERVER_HOST) #192.168.72.114
 c.port(SERVER_PORT)
 
-toggle = False
+
 root=Tk()  
 root.attributes("-fullscreen",True) #fullscreen
 #root.geometry("1280x720") #windowed for debugging
@@ -25,7 +24,7 @@ def quitpython():
     exit()
 
 def shutdownraspi():
-    call("sudo nohup shutdown -h now", shell=True) # strictly works on raspbian or regular linux
+    call("sudo nohup shutdown -h now", shell=True) # strictly works on raspbian or regular linux to shut down
 def RelayTrigger(ADDR): # take in the address
     toggle = True
     print(ADDR)
@@ -34,7 +33,7 @@ def RelayTrigger(ADDR): # take in the address
             print("unable to connect to "+SERVER_HOST+":"+str(SERVER_PORT))
 
     if c.is_open():
-        is_ok = c.write_single_coil(ADDR, toggle) #give 2049 - 2057 a test as well, should trigger Y0 if it isn't tied to anything
+        is_ok = c.write_single_coil(ADDR, toggle) #give 2049 - 2057 a test as well, should trigger Y outputs if not rung to anything
         time.sleep(1)
         toggle = not toggle
         is_ok = c.write_single_coil(ADDR, toggle)
