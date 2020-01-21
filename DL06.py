@@ -42,8 +42,8 @@ def RelayTrigger(ADDR): # take in the address
 buttonPADC1006=Button(root, height=h, width=w, font =("Helvetica","40"),text="C1010", command=lambda: RelayTrigger(3593))
 buttonPADC1006.place(x=30,y=80)
 
-buttonPADCC1010=Button(root, height=h, width=w,font =("Helvetica","40"), text="C1005", command=lambda: RelayTrigger(3590))
-buttonPADCC1010.place(x=430,y=80)
+buttonPADC1010=Button(root, height=h, width=w,font =("Helvetica","40"), text="C1005", command=lambda: RelayTrigger(3590))
+buttonPADC1010.place(x=430,y=80)
 
 SHUTITALLDOWN=Button(root, height=2, width=w,font =("Helvetica","20"), text="Shut Down", command=lambda: shutdownraspi())
 SHUTITALLDOWN.place(x=560,y=400)
